@@ -7,7 +7,7 @@ import java.io.PrintStream;
  */
 public class Hello {
 
-    static final String HELLO = "Yo, Yo, Yo!";
+    static final String HELLO = "Hello!";
 
     public static final int MAXIMUM_AMOUNT_OF_TIMES = 20;
 
@@ -22,7 +22,7 @@ public class Hello {
     public void setTimes(int times) {
         if (times < 0 || times > MAXIMUM_AMOUNT_OF_TIMES) {
             throw new IllegalArgumentException(String.format(
-                    "Parameter «times» should be a positive number no larger than %d.",
+                    "Parameter «times» should be a positive number no bigger than %d.",
                     MAXIMUM_AMOUNT_OF_TIMES
             ));
         }
