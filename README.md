@@ -29,5 +29,4 @@ This example follows the following basic conventions:
 
 # Revision
 
-Ver 1.0.0
-Ver 1.0.1
+Ver 1.0.2
