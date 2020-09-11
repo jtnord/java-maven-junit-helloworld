@@ -9,7 +9,7 @@ public class Hello {
 
     static final String HELLO = "Hello!";
 
-    public static final int MAXIMUM_AMOUNT_OF_TIMES = 20;
+    public static final int MAXIMUM_AMOUNT_OF_TIMES = 25;
 
     private int times = 1;
 
