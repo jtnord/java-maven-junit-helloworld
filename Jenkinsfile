@@ -17,5 +17,6 @@ node {
    stage('Results') {
        archiveArtifacts 'target/*.jar'
        junit 'target/surefire-reports/*.xml'
+       recordIssues(tool: spotBugs(), qualityGates: [[threshold: 1, type: 'TOTAL', unstable: true]])
    }
 }
