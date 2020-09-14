@@ -22,7 +22,7 @@ public class Hello {
     public void setTimes(int times) {
         if (times < 0 || times > MAXIMUM_AMOUNT_OF_TIMES) {
             throw new IllegalArgumentException(String.format(
-                    "Parameter «times» should be a number between 1 and %d inclusive.",
+                    "Parameter «times» should be a number greater than or equal to 1 and less than or equal to %d.",
                     MAXIMUM_AMOUNT_OF_TIMES
             ));
         }
