@@ -16,13 +16,7 @@ node {
    }
    stage('Results') {
        archiveArtifacts 'target/*.jar'
-               script {
-                       def testResults = findFiles(glob: '**/target/surefire-reports/TEST-*.xml')
-                       for(xml in testResults) {
-                           touch xml.getPath()
-                       }
-                   }
-               junit '**/target/surefire-reports/TEST-*.xml'
-               recordIssues(tool: spotBugs(), qualityGates: [[threshold: 1, type: 'TOTAL', unstable: true]])
+       junit '**/target/surefire-reports/TEST-*.xml'
+       recordIssues(tool: spotBugs(), qualityGates: [[threshold: 1, type: 'TOTAL', unstable: true]])
    }
 }
