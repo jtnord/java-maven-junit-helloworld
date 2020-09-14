@@ -46,7 +46,7 @@ public class Hello {
     }
 
     @CheckForNull
-    public String getStringorNull(){
+    public String getStringOrNull(){
         return null;
     }
 }
