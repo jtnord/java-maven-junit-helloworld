@@ -68,6 +68,9 @@
           <execution>
             <id>spotbugs</id>
             <phase>test</phase>
+            <goals>
+              <goal>spotbugs</goal>
+            </goals>
           </execution>
         </executions>
         <configuration>
