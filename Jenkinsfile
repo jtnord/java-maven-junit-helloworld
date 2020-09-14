@@ -13,10 +13,10 @@ node {
       withEnv(["MVN_HOME=$mvnHome"]) {
           sh '"$MVN_HOME/bin/mvn" install'
       }
+      recordIssues(tool: spotBugs(), qualityGates: [[threshold: 1, type: 'TOTAL', unstable: true]])
    }
    stage('Results') {
        archiveArtifacts 'target/*.jar'
        junit '**/target/surefire-reports/TEST-*.xml'
-       recordIssues(tool: spotBugs(), qualityGates: [[threshold: 1, type: 'TOTAL', unstable: true]])
    }
 }
